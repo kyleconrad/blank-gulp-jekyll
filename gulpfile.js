@@ -150,6 +150,16 @@ gulp.task('default', [
 	);
 });
 
+// Build prep
+gulp.task('prep', [
+		'remove-serve',
+		'jekyll'
+	], function(){
+	gulp.run(
+		'sass'
+	);
+});
+
 // Build functionality with cleaning, moving, compiling, etc.
 gulp.task('build', [
 		'remove-dist'
